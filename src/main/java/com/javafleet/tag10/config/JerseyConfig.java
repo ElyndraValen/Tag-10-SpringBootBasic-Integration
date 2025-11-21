@@ -14,11 +14,15 @@ import org.springframework.stereotype.Component;
  * - Jakarta EE Standards in Spring Boot 3.x
  * 
  * Diese Config ermöglicht JAX-RS neben Spring MVC!
- * 
+ * In der application.propperties gibt es auch eine Endpunktkonfiguration
+ * # Jersey (JAX-RS) Configuration (Tag 9)
+ * spring.jersey.application-path=/jakarta
  * @author Franz-Martin Schmidt
  */
+
+
 @Component
-@ApplicationPath("/api")
+@ApplicationPath("/jakarta")
 public class JerseyConfig extends ResourceConfig {
     
     public JerseyConfig() {
