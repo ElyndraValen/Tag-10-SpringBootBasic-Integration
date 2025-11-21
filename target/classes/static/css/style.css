@@ -1,0 +1,428 @@
+/* ============================================
+   Spring Boot Basic Tag 10 - Stylesheet
+   java-developer.online Dark Theme
+   Dark Background + Orange Headers + White Text
+   ============================================ */
+
+/* CSS Variables für java-developer.online Design */
+:root {
+    --bg-dark: #1a1a1a;
+    --bg-darker: #0d0d0d;
+    --bg-light: #2a2a2a;
+    --orange-primary: #ff8c00;
+    --orange-light: #ffa500;
+    --orange-dark: #e67e00;
+    --text-white: #ffffff;
+    --text-gray: #cccccc;
+    --text-light-gray: #999999;
+    --border-color: #404040;
+    --success: #28a745;
+    --danger: #dc3545;
+    --info: #17a2b8;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 3px solid var(--orange-primary);
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    color: var(--orange-primary);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+}
+
+.header h2 {
+    color: var(--orange-light);
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+}
+
+/* Sections */
+section {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+section h3 {
+    color: var(--orange-primary);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--orange-dark);
+    padding-bottom: 0.5rem;
+}
+
+section h4 {
+    color: var(--orange-light);
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Info Box */
+.info-box {
+    background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-light) 100%);
+    border-left: 4px solid var(--orange-primary);
+}
+
+.stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    flex: 1;
+    min-width: 200px;
+}
+
+.stat-label {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.stat-value {
+    color: var(--orange-primary);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Form Section */
+.form-section {
+    background-color: var(--bg-darker);
+}
+
+.person-form {
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--text-gray);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-white);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--orange-primary);
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--orange-primary);
+    color: var(--text-white);
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--orange-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 140, 0, 0.3);
+}
+
+.btn-delete {
+    background-color: var(--danger);
+    color: var(--text-white);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+}
+
+/* Table */
+.person-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.person-table thead {
+    background-color: var(--bg-darker);
+    border-bottom: 2px solid var(--orange-primary);
+}
+
+.person-table th {
+    color: var(--orange-primary);
+    text-align: left;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.person-table td {
+    color: var(--text-white);
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.person-table tbody tr {
+    transition: background-color 0.3s;
+}
+
+.person-table tbody tr:hover {
+    background-color: var(--bg-darker);
+}
+
+.empty-message {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-gray);
+    font-style: italic;
+}
+
+/* API Documentation */
+.api-docs {
+    background-color: var(--bg-darker);
+}
+
+.api-group {
+    margin-bottom: 2rem;
+}
+
+.endpoint {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    background-color: var(--bg-light);
+    border-left: 3px solid var(--orange-primary);
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
+.method {
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    min-width: 60px;
+    text-align: center;
+}
+
+.method.get {
+    background-color: var(--success);
+    color: white;
+}
+
+.method.post {
+    background-color: var(--info);
+    color: white;
+}
+
+.method.put {
+    background-color: var(--orange-primary);
+    color: white;
+}
+
+.method.delete {
+    background-color: var(--danger);
+    color: white;
+}
+
+.endpoint code {
+    color: var(--orange-light);
+    background-color: var(--bg-darker);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    flex: 1;
+}
+
+.endpoint .desc {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* Tech Stack */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.tech-item {
+    background-color: var(--bg-darker);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s;
+}
+
+.tech-item:hover {
+    border-color: var(--orange-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(255, 140, 0, 0.2);
+}
+
+.tech-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.tech-name {
+    color: var(--text-white);
+    font-weight: 600;
+}
+
+/* Lessons Section */
+.lesson-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.lesson-item {
+    background-color: var(--bg-darker);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--orange-primary);
+    transition: all 0.3s;
+}
+
+.lesson-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(255, 140, 0, 0.2);
+}
+
+.lesson-item h4 {
+    color: var(--orange-primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.lesson-item p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 3px solid var(--orange-primary);
+}
+
+.footer p {
+    color: var(--text-gray);
+    margin-bottom: 0.5rem;
+}
+
+.footer strong {
+    color: var(--orange-primary);
+}
+
+.footer a {
+    color: var(--orange-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--orange-primary);
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .person-form {
+        flex-direction: column;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .endpoint {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

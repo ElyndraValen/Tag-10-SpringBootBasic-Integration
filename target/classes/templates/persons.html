@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Boot Basic Tag 10 - Person Management</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🎉 Spring Boot Basic - Tag 10</h1>
+            <h2>Integration & Abschluss - Das große Finale</h2>
+            <p class="subtitle">Person Management System - Alle 9 Tage vereint!</p>
+        </header>
+
+        <!-- Info Section -->
+        <section class="info-box">
+            <h3>📊 System Status</h3>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Total Persons:</span>
+                    <span class="stat-value" th:text="${totalCount}">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">API Endpoints:</span>
+                    <span class="stat-value">3 (Spring MVC + JAX-RS + Thymeleaf)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add Person Form (Tag 4) -->
+        <section class="form-section">
+            <h3>➕ Neue Person hinzufügen</h3>
+            <form th:action="@{/persons/add}" th:object="${newPerson}" method="post" class="person-form">
+                <div class="form-group">
+                    <label for="firstname">Vorname:</label>
+                    <input type="text" id="firstname" th:field="*{firstname}" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Nachname:</label>
+                    <input type="text" id="lastname" th:field="*{lastname}" required>
+                </div>
+                <button type="submit" class="btn-primary">Person erstellen</button>
+            </form>
+        </section>
+
+        <!-- Person List (Tag 3) -->
+        <section class="list-section">
+            <h3>👥 Personen-Liste</h3>
+            <div th:if="${persons.isEmpty()}" class="empty-message">
+                <p>Keine Personen vorhanden. Füge die erste Person hinzu!</p>
+            </div>
+            <table th:unless="${persons.isEmpty()}" class="person-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Vorname</th>
+                        <th>Nachname</th>
+                        <th>Aktionen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="person : ${persons}">
+                        <td th:text="${person.id}">1</td>
+                        <td th:text="${person.firstname}">Max</td>
+                        <td th:text="${person.lastname}">Mustermann</td>
+                        <td>
+                            <a th:href="@{/persons/delete/{id}(id=${person.id})}" 
+                               class="btn-delete"
+                               onclick="return confirm('Person wirklich löschen?')">
+                                🗑️ Löschen
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- API Documentation (Tag 1, 9) -->
+        <section class="api-docs">
+            <h3>🔌 API Endpoints</h3>
+            
+            <div class="api-group">
+                <h4>Spring MVC REST API (Tag 1)</h4>
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <code>/api/persons</code>
+                    <span class="desc">Alle Personen als JSON</span>
+                </div>
+                <div class="endpoint">
+                    <span class="method post">POST</span>
+                    <code>/api/persons</code>
+                    <span class="desc">Neue Person erstellen</span>
+                </div>
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <code>/api/persons/{id}</code>
+                    <span class="desc">Person per ID</span>
+                </div>
+                <div class="endpoint">
+                    <span class="method put">PUT</span>
+                    <code>/api/persons/{id}</code>
+                    <span class="desc">Person aktualisieren</span>
+                </div>
+                <div class="endpoint">
+                    <span class="method delete">DELETE</span>
+                    <code>/api/persons/{id}</code>
+                    <span class="desc">Person löschen</span>
+                </div>
+            </div>
+
+            <div class="api-group">
+                <h4>JAX-RS REST API (Tag 9 - Jakarta EE Standard)</h4>
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <code>/api/jaxrs/persons</code>
+                    <span class="desc">Alle Personen (JAX-RS)</span>
+                </div>
+                <div class="endpoint">
+                    <span class="method post">POST</span>
+                    <code>/api/jaxrs/persons</code>
+                    <span class="desc">Neue Person (JAX-RS)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technologies Used -->
+        <section class="tech-stack">
+            <h3>🛠️ Verwendete Technologien</h3>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <span class="tech-icon">☕</span>
+                    <span class="tech-name">Java 21</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🍃</span>
+                    <span class="tech-name">Spring Boot 3.2</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🌿</span>
+                    <span class="tech-name">Thymeleaf</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🔌</span>
+                    <span class="tech-name">WebSockets</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">📡</span>
+                    <span class="tech-name">JAX-RS</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🎯</span>
+                    <span class="tech-name">AOP</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lessons Learned -->
+        <section class="lessons">
+            <h3>🎓 Was du in 10 Tagen gelernt hast</h3>
+            <div class="lesson-grid">
+                <div class="lesson-item">
+                    <h4>Tag 1: REST API</h4>
+                    <p>@RestController, HTTP, JSON</p>
+                </div>
+                <div class="lesson-item">
+                    <h4>Tag 2: Spring Container & DI</h4>
+                    <p>IoC, @Service, @PostConstruct</p>
+                </div>
+                <div class="lesson-item">
+                    <h4>Tag 3: Thymeleaf</h4>
+                    <p>Template Engine, Server-Side Rendering</p>
+                </div>
+                <div class="lesson-item">
+                    <h4>Tag 4: Forms & MVC</h4>
+                    <p>Model-View-Controller, Post-Redirect-Get</p>
+                </div>
+                <div class="lesson-item">
+                    <h4>Tag 5: Configuration & Logging</h4>
+                    <p>application.properties, SLF4J</p>
+                </div>
+                <div class="lesson-item">
+                    <h4>Tag 6: DI & AOP</h4>
+                    <p>Aspect-Oriented Programming</p>
+                </div>
+                <div class="lesson-item">
+                    <h4>Tag 7: Scopes</h4>
+                    <p>Singleton, Session, Request</p>
+                </div>
+                <div class="lesson-item">
+                    <h4>Tag 8: WebSockets</h4>
+                    <p>Real-Time Communication, STOMP</p>
+                </div>
+                <div class="lesson-item">
+                    <h4>Tag 9: JAX-RS</h4>
+                    <p>Jakarta EE Standards, Migration</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>💙 Spring Boot Basic Kurs abgeschlossen!</p>
+            <p>Von <strong>Elyndra Valen</strong> & dem Java Fleet Systems Team</p>
+            <p><a href="https://www.java-developer.online" target="_blank">www.java-developer.online</a></p>
+        </footer>
+    </div>
+</body>
+</html>

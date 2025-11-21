@@ -1,0 +1,14 @@
+/mnt/windows/dokumente/JavaFleet/Kurse/Spring Boot Basic/Tag10/SpringBootBasic-Tag10/src/main/java/com/javafleet/tag10/model/Person.java
+/mnt/windows/dokumente/JavaFleet/Kurse/Spring Boot Basic/Tag10/SpringBootBasic-Tag10/src/main/java/com/javafleet/tag10/Tag10Application.java
+/mnt/windows/dokumente/JavaFleet/Kurse/Spring Boot Basic/Tag10/SpringBootBasic-Tag10/src/main/java/com/javafleet/tag10/aspect/LoggingAspect.java
+/mnt/windows/dokumente/JavaFleet/Kurse/Spring Boot Basic/Tag10/SpringBootBasic-Tag10/src/main/java/com/javafleet/tag10/controller/PersonResource.java
+/mnt/windows/dokumente/JavaFleet/Kurse/Spring Boot Basic/Tag10/SpringBootBasic-Tag10/src/main/java/com/javafleet/tag10/controller/PersonViewController.java
+/mnt/windows/dokumente/JavaFleet/Kurse/Spring Boot Basic/Tag10/SpringBootBasic-Tag10/src/main/java/com/javafleet/tag10/service/ApplicationStatistics.java
+/mnt/windows/dokumente/JavaFleet/Kurse/Spring Boot Basic/Tag10/SpringBootBasic-Tag10/src/main/java/com/javafleet/tag10/config/JerseyConfig.java
+/mnt/windows/dokumente/JavaFleet/Kurse/Spring Boot Basic/Tag10/SpringBootBasic-Tag10/src/main/java/com/javafleet/tag10/service/PersonFavorites.java
+/mnt/windows/dokumente/JavaFleet/Kurse/Spring Boot Basic/Tag10/SpringBootBasic-Tag10/src/main/java/com/javafleet/tag10/websocket/MessageType.java
+/mnt/windows/dokumente/JavaFleet/Kurse/Spring Boot Basic/Tag10/SpringBootBasic-Tag10/src/main/java/com/javafleet/tag10/websocket/ChatController.java
+/mnt/windows/dokumente/JavaFleet/Kurse/Spring Boot Basic/Tag10/SpringBootBasic-Tag10/src/main/java/com/javafleet/tag10/config/WebSocketConfig.java
+/mnt/windows/dokumente/JavaFleet/Kurse/Spring Boot Basic/Tag10/SpringBootBasic-Tag10/src/main/java/com/javafleet/tag10/websocket/ChatMessage.java
+/mnt/windows/dokumente/JavaFleet/Kurse/Spring Boot Basic/Tag10/SpringBootBasic-Tag10/src/main/java/com/javafleet/tag10/controller/PersonApiController.java
+/mnt/windows/dokumente/JavaFleet/Kurse/Spring Boot Basic/Tag10/SpringBootBasic-Tag10/src/main/java/com/javafleet/tag10/service/PersonService.java
