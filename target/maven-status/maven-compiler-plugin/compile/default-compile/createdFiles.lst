@@ -2,8 +2,8 @@ com\javafleet\tag10\service\PersonService.class
 com\javafleet\tag10\config\WebSocketConfig.class
 com\javafleet\tag10\Tag10Application.class
 com\javafleet\tag10\aspect\LoggingAspect.class
-com\javafleet\tag10\model\Person.class
 com\javafleet\tag10\config\JerseyConfig.class
+com\javafleet\tag10\model\Person.class
 com\javafleet\tag10\controller\PersonResource.class
 com\javafleet\tag10\service\PersonFavorites.class
 com\javafleet\tag10\controller\PersonApiController.class

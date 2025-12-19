@@ -32,7 +32,7 @@ public class PersonViewController {
      * GET /persons
      * Zeigt Liste aller Personen
      */
-    @GetMapping
+    @GetMapping(path = "/")
     public String listPersons(Model model) {
         log.info("📄 GET /persons - Thymeleaf View");
         model.addAttribute("persons", personService.getAllPersons());

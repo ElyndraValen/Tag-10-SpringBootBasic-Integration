@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Fehler</title>
+</head>
+<body>
+    <h1>Ein Fehler ist aufgetreten</h1>
+    <p th:text="${status}">Status</p>
+    <p th:text="${error}">Fehler</p>
+    <p th:text="${message}">Nachricht</p>
+    <p th:text="${path}">Pfad</p>
+    <a th:href="@{persons/}">Zurück zur Startseite</a>
+</body>
+</html>
